@@ -6,52 +6,52 @@ import Foundation
 //In the Playground main space, write an example using the created class
 
 
-
-class Node<T> {
-    var value: T
-    var next: Node?
-    var prev: Node?
-
-    init(value: T) {
-        self.value = value
-    }
+struct Stack<Element> {
+  var elements = [Element]()
+  
+  mutating func push(_ element: Element){
+   elements.append(element)
+  }
+  mutating func pop()->Element?{
+   if elements.count == 0{
+     return nil
+   }
+    return elements.remove(at: elements.count-1)
+  }
+    
+    
+  func peek()->Element?{
+   if elements.count == 0 {
+     return nil
+   }
+    return elements[elements.count-1]
+  }
+    
+    
+  func isEmpty()->Bool{
+    return elements.count == 0
+  }
+    
+    
+  func printElements(){
+    print(elements)
+ }
 }
 
-class Queue<T> {
 
-    private var head: Node<T>?
-    private var tail: Node<T>?
 
-    var isEmpty: Bool {
-        get {
-            return head == nil
-        }
-    }
+var myStack = Stack<Int>()
 
-    func add(value: T) {
-        if head == nil {
-            let node = Node(value: value)
-            head = node
-            tail = node
-            head?.next = tail
-            tail?.prev = head
-        }  else {
-            let curr = tail
-            tail = Node(value: value)
-            curr?.next = tail
-            tail?.prev = curr
-        }
-    }
+myStack.peek()
+myStack.isEmpty()
 
-    func peek() -> T? {
-        return head?.value
-    }
+myStack.push(111)
+myStack.push(22)
+myStack.push(3)
 
-    func poll() -> T? {
-        if let value = head?.value {
-            head = head?.next
-            return value
-        }
-        return nil
-    }
-}
+myStack.pop()
+
+myStack.peek()
+
+myStack.printElements()
+
