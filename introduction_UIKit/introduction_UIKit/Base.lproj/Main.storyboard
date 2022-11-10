@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hkK-QQ-HdB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="vWj-0p-58X">
+            <objects>
+                <viewController id="hkK-QQ-HdB" customClass="ViewController" customModule="introduction_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9iK-bB-1Vo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiW-Rs-2wC">
+                                <rect key="frame" x="0.0" y="378" width="219" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Старт">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startTapped:" destination="hkK-QQ-HdB" eventType="touchUpInside" id="2KO-1u-g5E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjz-yG-Zz7">
+                                <rect key="frame" x="219" y="378" width="195" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Стоп">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="stopTapped:" destination="hkK-QQ-HdB" eventType="touchUpInside" id="Rt7-sl-7hm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNb-yL-m4u">
+                                <rect key="frame" x="99.5" y="194" width="215" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aDw-VS-NHs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YNb-yL-m4u" firstAttribute="centerX" secondItem="aDw-VS-NHs" secondAttribute="centerX" id="4dw-0i-m6N"/>
+                            <constraint firstItem="NiW-Rs-2wC" firstAttribute="leading" secondItem="aDw-VS-NHs" secondAttribute="leading" id="BOO-7E-xeS"/>
+                            <constraint firstItem="cjz-yG-Zz7" firstAttribute="leading" secondItem="NiW-Rs-2wC" secondAttribute="trailing" id="Ctw-g1-m6P"/>
+                            <constraint firstItem="NiW-Rs-2wC" firstAttribute="centerY" secondItem="cjz-yG-Zz7" secondAttribute="centerY" id="DK8-c7-VKf"/>
+                            <constraint firstItem="YNb-yL-m4u" firstAttribute="top" secondItem="aDw-VS-NHs" secondAttribute="top" constant="150" id="EvR-iC-d1s"/>
+                            <constraint firstItem="cjz-yG-Zz7" firstAttribute="top" secondItem="YNb-yL-m4u" secondAttribute="bottom" constant="100" id="JYz-3t-VBw"/>
+                            <constraint firstItem="aDw-VS-NHs" firstAttribute="trailing" secondItem="cjz-yG-Zz7" secondAttribute="trailing" id="rP1-vO-dbo"/>
+                            <constraint firstItem="cjz-yG-Zz7" firstAttribute="width" secondItem="NiW-Rs-2wC" secondAttribute="width" multiplier="0.891026" id="ukB-7M-aUD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TimerLabel" destination="YNb-yL-m4u" id="9Nr-KG-YuI"/>
+                        <outlet property="startButton" destination="NiW-Rs-2wC" id="5aw-Km-9fg"/>
+                        <outlet property="stopButton" destination="cjz-yG-Zz7" id="oWl-az-mfI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Il9-Lx-WJk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146.37681159420291" y="-13.392857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
