@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlantCell" customModule="hw_Collection_view" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="sel-Bn-UwV" customClass="PlantCell" customModule="hw_Collection_view" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yLR-tx-uSy">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wme-VV-NG4">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="160" id="211-eS-1rH"/>
+                            <constraint firstAttribute="height" constant="160" id="CIB-H7-faK"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wme-VV-NG4" firstAttribute="top" secondItem="yLR-tx-uSy" secondAttribute="top" id="3P6-Ih-hPj"/>
+                    <constraint firstItem="wme-VV-NG4" firstAttribute="leading" secondItem="yLR-tx-uSy" secondAttribute="leading" id="MXt-G9-Dx2"/>
+                    <constraint firstItem="wme-VV-NG4" firstAttribute="centerY" secondItem="yLR-tx-uSy" secondAttribute="centerY" id="OOY-ZF-jav"/>
+                    <constraint firstItem="wme-VV-NG4" firstAttribute="centerX" secondItem="yLR-tx-uSy" secondAttribute="centerX" id="cYq-Pm-heU"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="128" height="128"/>
+            <connections>
+                <outlet property="plantImage" destination="wme-VV-NG4" id="Nds-CU-iwW"/>
+            </connections>
+            <point key="canvasLocation" x="-94.20289855072464" y="527.67857142857144"/>
+        </collectionViewCell>
+    </objects>
+</document>
