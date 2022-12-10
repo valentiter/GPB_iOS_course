@@ -10,10 +10,10 @@ class Homo {
     var height: Int
     
     var beginningOfExistence: Int
-    var endOfExistence: Int
+    var endOfExistence: String = "0"
     var numOrder: String
     
-    var lifePeriod: String {
+    fileprivate var lifePeriod: String {
         return "\(beginningOfExistence) - \(endOfExistence) \(numOrder) years ago"
     }
     
@@ -25,20 +25,20 @@ class Homo {
         brainCapacity = 0
         height = 0
         beginningOfExistence = 0
-        endOfExistence = 0
         numOrder = " "
     }
 }
 
 class Neanderthalensis: Homo {
     
+    
     var masteredToolMaterial: String = " "
     
-    func performRitual() -> String {
+    private func performRitual() -> String {
         return "Ritual perfomed"
     }
     
-    func lightFire() -> String {
+    public func lightFire() -> String {
         return "The fire is lit"
     }
     
@@ -49,6 +49,10 @@ class Neanderthalensis: Homo {
 }
 
 class Cro_Magnon: Neanderthalensis {
+    
+    private func rockCarvings() -> String {
+        return "I made rock carvings"
+    }
 
     func sewClothes() -> String {
         return "I made the clothes"
@@ -62,7 +66,7 @@ class Cro_Magnon: Neanderthalensis {
 
 let neanderthalensis = Neanderthalensis()
 neanderthalensis.beginningOfExistence = 130
-neanderthalensis.endOfExistence = 28
+neanderthalensis.endOfExistence = "28"
 neanderthalensis.numOrder = "thousand"
 neanderthalensis.masteredToolMaterial = "rock"
 
